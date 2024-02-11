@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgb(1, 0, 40),rgb(12, 0, 116));
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    width: 650px;
+}
+
+.square{
+    width: 140px;
+    height: 140px;
+    background-color: rgb(245, 0, 143);
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    top: 40px;
+    left: 10px;   
+}
+
+.circle{
+    width: 140px;
+    height: 140px;
+    background-color: rgb(40, 126, 255);
+    border-radius: 150px;
+    position: absolute;
+    z-index: -1;
+    bottom:25px;
+    right: 0px;
+}
+
+.stopwatch{
+    width: 550px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(25px);
+    box-shadow: 10px 10px 70px 60px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hour,.minute,.second,.colen,.ampm{
+    color: white;
+    font-size: 72px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.ampm{
+    margin-left: 25px;
+}
+
+.info{
+    color: white;
+    margin-top: -15px;
+    font-size: 12px;
+    font-weight: 400;
+    width:50px;
+    text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        width: 360px;
+    }
+
+    .stopwatch{
+        width: 330px;
+        height: 120px;
+        padding: 10px;
+    }
+
+    .hour,.minute,.second,.colen,.ampm{
+        font-size: 32px;
+        font-weight: 600;
+        padding-bottom: 15px;
+    }
+
+    .square{
+        width: 100px;
+        height: 100px;
+        top: 60px;
+        left: -10px
+    }
+
+    .ampm{
+        margin-left: 5px;
+    }
+
+    .circle{
+        width: 100px;
+        height: 100px;
+        bottom: 50px;
+        right: -30px;
+    }
+
+}
